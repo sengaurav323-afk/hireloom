@@ -91,7 +91,7 @@ async function readResume(file) {
 }
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'outputs')));
+app.use(express.static(__dirname));
 app.get('/api/state', (req, res) => res.json(loadStore()));
 app.post('/api/resume', upload.single('resume'), async (req, res) => {
   try {
