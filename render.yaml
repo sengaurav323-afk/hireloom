@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hireloom
+    runtime: node
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/state
+    envVars:
+      - key: NODE_ENV
+        value: production
