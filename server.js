@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 } });
 const PORT = process.env.PORT || 3030;
 const DATA_DIR = path.join(__dirname, 'work', 'data');
 const STORE_PATH = path.join(DATA_DIR, 'pathway.json');
